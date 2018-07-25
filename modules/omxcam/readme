@@ -1,0 +1,17 @@
+先编译libomxcam库文件　用动态连接库，静态或直接编译有问题
+注意关闭调试ｄｅｂｕｇ
+
+
+复制so文件和h文件到/usr/local/lib include
+
+
+omxcam===yuv=======
+planes_slice.length_y=20480  planes_slice.offset_y=0
+planes_slice.length_u=5120  planes_slice.offset_u=20480
+planes_slice.length_v=5120  planes_slice.offset_v=25600
+
+buffer.length:30720
+  frame_size = planes.offset_v + planes.length_v; 
+
+
+omxcam-yuv.c　在yuv模式下，可以看到图像但是较卡，ｃｐｕ占用１７０多
